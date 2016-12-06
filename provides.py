@@ -1,4 +1,4 @@
-from charmhelpers.core import hookenv
+
 from charms.reactive import hook
 from charms.reactive import RelationBase
 from charms.reactive import scopes
@@ -17,7 +17,7 @@ class ProvidesDockerHost(RelationBase):
 
     def configure(self, url):
         relation_info = {
-            'url': url.format(address, port, path),
+            'url': url,
         }
 
         self.set_remote(**relation_info)
