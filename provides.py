@@ -15,7 +15,7 @@ class ProvidesDockerHost(RelationBase):
     def broken(self):
         self.remove_state('{relation_name}.connected')
 
-    def configure, url):
+    def configure(self, url):
         relation_info = {
             'url': url.format(address, port, path),
         }
